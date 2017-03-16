@@ -94,7 +94,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       }
     </script>
 
-    <link rel="import" href="/src/my-app.html">
+    <link rel="import" href="/src/my-app.html" async>
 
     <style>
       body {
@@ -103,10 +103,23 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         line-height: 1.5;
         min-height: 100vh;
         background-color: #eeeeee;
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAOCAIAAABcs4BtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuMTM0A1t6AAADE0lEQVQ4T12S6XKrOBSEeZK7OjEYzCo2IQQSqw3G2InjJZNbM+//EtNAKj9uVdcpHRV8p9WSojl0ZUaalxpBvg3ykNWyfdmN76J9wY4ZyW0kUfHB722IuiHcCIUeZCYttrTQp2+EEWQWLRzeQBYt0YIbf3F1l1kuJUEiRCuLzk8bbE7zQrFwN2TiYpIeCTMpgZ7dZECTrPXF3hc7LKwoVzR34qou0/3MJIx4cRSyJM7yVPoJJv/NxQJcI5bgWqyCd0yC/cUs5PIGraLa0cqMLVpZSe3HAtwk5lHAKAUx++KqSw6Ez5R8G0tAIZOWnp+RQHi8Xbhe1pJQKjpJAtEV40exfwv81PMoDVkcpl6YTVHOXCPMYRPHwo7qsSlTOplduJbHbXCz1pmFAWiV7vLv/vJf2Lyl/YMQGvo0CBjxueZnzzZ9smLUZQHus5NgjdDWHp9EMtXLdJPqNtuQXEVL4CZDq8jxIz9+sP5hJDufUC/gjjyTbI/gcPCfur/olxEsaGyiIrqVRVc2W9mJaoR2yFUnfZq1dlK0SrS7OcWZdg9DnJNiIOlum4/x/raNCvz/c+P/2BBoZeLS+Hr2i4pLng+RgPtkRk9WtEA/ZUWKI0960tli3IpTMbyL/m5mR1JfPL6fuBr5tna/qy6edjXcquFeD/fqeK+P989wrIk7ReTyBYoFWnDPWtwafNBYXx7/ybv7JunATXeXNcLFqY0AsiMJFqCTxkfZvalOMnPp2vrkfgkpKVF7tfLjhvW/SSGH92R33aSHbTbQ/c0IpeFQhAu/HqvrEcRPseqoOcmUMohz3H9zk+4OBMz+8mRcv8b1xciO66hGZd094A3+/K55SXFoxnszPprTpFB0Gy99tie06sRrN1VJbtHapJXm52gVv3otT394/0DEHDOqU1CeSd77xdi9/Nkdb0X3ynhbD9d2fOwWnd55e6blQQfCYao9pTG9sEBCGIBWMViPHFw5umIs+itPZcoEXlsumrLYl0UnxV7KrhmuQFeHa32YBsB4OV9jM74j9+Jwlf1VdG8QFsXh+j/uYRX7td8e9AAAAABJRU5ErkJggg==');
+        background-size: cover;
+        background-position: center;
       }
+      /*my-app {
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB0AAAAOCAIAAABcs4BtAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuMTM0A1t6AAADE0lEQVQ4T12S6XKrOBSEeZK7OjEYzCo2IQQSqw3G2InjJZNbM+//EtNAKj9uVdcpHRV8p9WSojl0ZUaalxpBvg3ykNWyfdmN76J9wY4ZyW0kUfHB722IuiHcCIUeZCYttrTQp2+EEWQWLRzeQBYt0YIbf3F1l1kuJUEiRCuLzk8bbE7zQrFwN2TiYpIeCTMpgZ7dZECTrPXF3hc7LKwoVzR34qou0/3MJIx4cRSyJM7yVPoJJv/NxQJcI5bgWqyCd0yC/cUs5PIGraLa0cqMLVpZSe3HAtwk5lHAKAUx++KqSw6Ez5R8G0tAIZOWnp+RQHi8Xbhe1pJQKjpJAtEV40exfwv81PMoDVkcpl6YTVHOXCPMYRPHwo7qsSlTOplduJbHbXCz1pmFAWiV7vLv/vJf2Lyl/YMQGvo0CBjxueZnzzZ9smLUZQHus5NgjdDWHp9EMtXLdJPqNtuQXEVL4CZDq8jxIz9+sP5hJDufUC/gjjyTbI/gcPCfur/olxEsaGyiIrqVRVc2W9mJaoR2yFUnfZq1dlK0SrS7OcWZdg9DnJNiIOlum4/x/raNCvz/c+P/2BBoZeLS+Hr2i4pLng+RgPtkRk9WtEA/ZUWKI0960tli3IpTMbyL/m5mR1JfPL6fuBr5tna/qy6edjXcquFeD/fqeK+P989wrIk7ReTyBYoFWnDPWtwafNBYXx7/ybv7JunATXeXNcLFqY0AsiMJFqCTxkfZvalOMnPp2vrkfgkpKVF7tfLjhvW/SSGH92R33aSHbTbQ/c0IpeFQhAu/HqvrEcRPseqoOcmUMohz3H9zk+4OBMz+8mRcv8b1xciO66hGZd094A3+/K55SXFoxnszPprTpFB0Gy99tie06sRrN1VJbtHapJXm52gVv3otT394/0DEHDOqU1CeSd77xdi9/Nkdb0X3ynhbD9d2fOwWnd55e6blQQfCYao9pTG9sEBCGIBWMViPHFw5umIs+itPZcoEXlsumrLYl0UnxV7KrhmuQFeHa32YBsB4OV9jM74j9+Jwlf1VdG8QFsXh+j/uYRX7td8e9AAAAABJRU5ErkJggg==');
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        min-width: 100%;
+        min-height: 100%;
+      }*/
+
     </style>
   </head>
   <body>
+
     <my-app></my-app>
     <!-- Built with love using Polymer Starter Kit -->
   </body>
